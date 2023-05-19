@@ -1,0 +1,13 @@
+Write a program that implements an AVL tree data structure. An AVL tree is a self-balancing binary search tree where the heights of the left and right subtrees of any node differ by at most one. Your program should support the following operations:
+
+rightRotate(Node y): This method performs a right rotation on the subtree rooted with node y. It rearranges the nodes in such a way that the left child of y, denoted as x, becomes the new root of the subtree. The right child of x becomes the left child of y, and the right child of y becomes the right child of x. This rotation preserves the binary search tree property and updates the heights of x and y to maintain the balance factor of the nodes.
+leftRotate(Node x): This method performs a left rotation on the subtree rooted with node x. It rearranges the nodes in such a way that the right child of x, denoted as y, becomes the new root of the subtree. The left child of y becomes the right child of x, and the left child of x becomes the left child of y. This rotation also preserves the binary search tree property and updates the heights of x and y to maintain the balance factor of the nodes.
+getBalance(Node N): This method calculates the balance factor of a given node N. The balance factor is defined as the difference between the heights of the left subtree and the right subtree of N. It returns a positive value if the left subtree is taller, a negative value if the right subtree is taller, and zero if both subtrees have the same height. The balance factor is useful for determining whether a node or its subtrees need rotation to restore the AVL tree balance property.
+insert(Node node, int key): Given a value, insert a new node with that value into the AVL tree. If the value already exists in the tree, do nothing.
+deleteNode(Node root, int key): Given a value, delete the node with that value from the AVL tree. If the value does not exist in the tree, do nothing. If the node to be deleted has two children, replace it with its in-order successor (the smallest node in its right subtree). After deletion, rebalance the tree if necessary to maintain AVL properties.
+preOrder(Node node): Print the values of the nodes in the AVL tree in in-order (left-root-right) traversal order.
+Your program should also include a main function that tests your implementation with some sample inputs and outputs. Use appropriate comments and indentation to make your code readable and understandable.
+
+Note: In addition to the standard BST operations, your AVL tree implementation should automatically balance itself by performing rotations when necessary to maintain AVL properties.
+
+ 
